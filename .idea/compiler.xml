@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cake" />
+        <module name="Common" />
+        <module name="Management" />
+        <module name="Site" />
       </profile>
     </annotationProcessing>
   </component>
