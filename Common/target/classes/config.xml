@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--
+properties：引用的内容
+
+environments:环境配置，暂时使用development（开发）
+transactionManager:事务管理程序
+dataSource:数据源->POOLED（池）
+property:属性(数据库链接地址，数据库账户，数据库密码)
+
+mappers:映像程序
+package:映射的包名
+-->
+<configuration>
+    <properties resource="jdbc.properties"/>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <package name="cn.huang.cake.mapper"/>
+    </mappers>
+</configuration>
